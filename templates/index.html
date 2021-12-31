@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Random Passoword Generator</title>
+    <link rel="stylesheet" href="static/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static/css/Contact-Form-Clean.css">
+    <link rel="stylesheet" href="static/css/styles.css">
+</head>
+
+<body>
+    <section class="contact-clean">
+        <div data-bss-parallax-bg="true" style="height: 100%;background-image: url(https://unsplash.it/1800/900?image=1051);background-position: center;background-size: cover;width: 100%;">
+            <form action="{{ url_for('password_func')}}" method="POST" style="color: var(--bs-pink);">
+                <h2 class="text-center" style="color: var(--bs-indigo);">Generate Your Unique Password</h2>
+                <input class="form-control" name="query1" id='query1' type="number" min="6" max="20" step="1" placeholder="Enter the Size of the Password You Want ">
+                <div class="mb-3"></div>
+                <div class="mb-3"></div>
+                <div class="mb-3"><textarea class="form-control" name="output1" placeholder="Your Password will Generate Here" rows="10">{{output1}}</textarea></div>
+                <div class="text-center mb-3"><button class="btn btn-primary text-center" type="submit" name="submit">Submit </button></div>
+                <h2 class="text-center">Made By Sabyasachi Seal</h2>
+            </form>
+        </div>
+    </section>
+    <script src="static/bootstrap/js/bootstrap.min.js"></script>
+    <script src="static/js/bs-init.js"></script>
+</body>
+
+</html>
